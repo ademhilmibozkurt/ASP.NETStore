@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SqlClient;
 
@@ -64,6 +62,8 @@ namespace MyStore.Pages.Clients
             clientInfo.name = "";clientInfo.email = "";
             clientInfo.phone = "";clientInfo.address = "";
             successMessage = "New client added correctly..";
+
+            Response.Redirect("/Clients/Index");
         }
     }
 }
